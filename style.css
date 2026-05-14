@@ -247,6 +247,34 @@ body:hover .cursor-glow {
     box-shadow: var(--shadow-glow);
 }
 
+.lang-toggle {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+    margin-left: 0.5rem;
+}
+
+.lang-toggle:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-glow);
+}
+
+.lang-label {
+    pointer-events: none;
+}
+
 /* Hamburger */
 .nav-toggle {
     display: none;
@@ -877,6 +905,20 @@ body:hover .cursor-glow {
     background: rgba(var(--accent-rgb), 0.05);
 }
 
+.pub-link-disabled {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-muted, var(--text-secondary));
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    border: 1px dashed var(--border-color);
+    opacity: 0.6;
+    cursor: default;
+}
+
 .pub-thumbnail {
     width: 120px;
     min-height: 80px;
@@ -1064,6 +1106,13 @@ body:hover .cursor-glow {
     font-size: 0.9rem;
     color: var(--accent);
     font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.exp-inst {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    font-weight: 400;
     margin-bottom: 0.75rem;
 }
 

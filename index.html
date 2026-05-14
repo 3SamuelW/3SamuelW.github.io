@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name — Researcher</title>
-    <meta name="description" content="Personal academic homepage of [Your Name], a researcher in [Your Field].">
+    <title>Houlin Wang — BME & CS @ ZJU</title>
+    <meta name="description" content="Personal homepage of Houlin Wang, undergraduate at Zhejiang University majoring in Biomedical Engineering with a minor in Computer Science. Interested in BCI, medical imaging, and multimodal AI.">
 
     <!-- Favicon — 替换为你自己的图标文件 -->
     <link rel="icon" href="favicon.png" type="image/png">
@@ -34,18 +34,21 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">
                 <span class="logo-bracket">&lt;</span>
-                <span class="logo-name">YN</span>
+                <span class="logo-name">HL</span>
                 <span class="logo-bracket">/&gt;</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#awards" class="nav-link">Awards</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#about" class="nav-link" data-zh="关于我" data-en="About">About</a></li>
+                <li><a href="#research" class="nav-link" data-zh="研究方向" data-en="Research">Research</a></li>
+                <li><a href="#publications" class="nav-link" data-zh="论文" data-en="Publications">Publications</a></li>
+                <li><a href="#education" class="nav-link" data-zh="教育经历" data-en="Education">Education</a></li>
+                <li><a href="#experience" class="nav-link" data-zh="项目经历" data-en="Experience">Experience</a></li>
+                <li><a href="#awards" class="nav-link" data-zh="荣誉奖项" data-en="Awards">Awards</a></li>
+                <li><a href="#contact" class="nav-link" data-zh="联系我" data-en="Contact">Contact</a></li>
             </ul>
+            <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+                <span class="lang-label">中/EN</span>
+            </button>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -58,42 +61,42 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <div class="hero-greeting" data-aos="fade-down" data-aos-delay="200">Hello, I'm</div>
+            <div class="hero-greeting" data-aos="fade-down" data-aos-delay="200"
+                 data-zh="你好，我是" data-en="Hello, I'm">Hello, I'm</div>
             <h1 class="hero-name" data-aos="fade-up" data-aos-delay="400">
-                <span class="name-first">Your</span>
-                <span class="name-last accent-text">Name</span>
+                <span class="name-first">Houlin</span>
+                <span class="name-last accent-text">Wang</span>
             </h1>
             <div class="hero-typed-wrapper" data-aos="fade-up" data-aos-delay="600">
-                <span class="typed-prefix">I'm a&nbsp;</span>
+                <span class="typed-prefix" data-zh="我是一名&nbsp;" data-en="I'm a&nbsp;">I'm a&nbsp;</span>
                 <span class="typed-text" id="typedText"></span>
             </div>
-            <p class="hero-tagline" data-aos="fade-up" data-aos-delay="800">
-                <!-- PLACEHOLDER: 一句话概括你的研究方向或个人宣言 -->
-                Exploring the frontiers of <span class="accent-text">[Your Research Field]</span> to [Your Vision/Goal].
+            <p class="hero-tagline" data-aos="fade-up" data-aos-delay="800"
+               data-zh="探索<span class='accent-text'>脑机接口</span>与<span class='accent-text'>医学智能</span>的交叉前沿，让技术服务于生命。"
+               data-en="Exploring the intersection of <span class='accent-text'>Brain-Computer Interfaces</span> and <span class='accent-text'>Medical AI</span> — bridging technology and life.">
+                Exploring the intersection of <span class="accent-text">Brain-Computer Interfaces</span> and <span class="accent-text">Medical AI</span> — bridging technology and life.
             </p>
             <div class="hero-cta" data-aos="fade-up" data-aos-delay="1000">
                 <a href="#contact" class="btn btn-primary">
-                    <span>Get in Touch</span>
+                    <span data-zh="联系我" data-en="Get in Touch">Get in Touch</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="#publications" class="btn btn-outline">
-                    <span>View Publications</span>
+                    <span data-zh="查看论文" data-en="View Publications">View Publications</span>
                 </a>
             </div>
             <div class="hero-social" data-aos="fade-up" data-aos-delay="1200">
-                <!-- PLACEHOLDER: 替换为你的社交链接 -->
-                <a href="#" class="social-icon" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
-                <a href="#" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/3SamuelW" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/houlin-wang-b43b87341/" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:3samuelw@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://3samuelw.github.io/note/" class="social-icon" aria-label="Notes Site" target="_blank" rel="noopener noreferrer"><i class="fas fa-book-open"></i></a>
             </div>
         </div>
         <div class="scroll-indicator">
             <div class="mouse">
                 <div class="mouse-wheel"></div>
             </div>
-            <span>Scroll Down</span>
+            <span data-zh="向下滚动" data-en="Scroll Down">Scroll Down</span>
         </div>
     </section>
 
@@ -101,52 +104,47 @@
     <section class="section about" id="about">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">01.</span> About Me
+                <span class="title-number">01.</span>
+                <span data-zh="关于我" data-en="About Me">About Me</span>
             </h2>
             <div class="about-grid">
                 <div class="about-image" data-aos="fade-right" data-aos-delay="200">
                     <div class="image-frame">
-                        <!-- PLACEHOLDER: 替换为你的照片路径 -->
-                        <div class="avatar-placeholder">
-                            <i class="fas fa-user"></i>
-                            <span>Your Photo</span>
-                        </div>
-                        <!-- <img src="assets/avatar.jpg" alt="Your Name"> -->
+                        <img src="favicon.png" alt="Houlin Wang" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
                     </div>
                     <div class="image-decoration"></div>
                 </div>
                 <div class="about-content" data-aos="fade-left" data-aos-delay="400">
-                    <p class="about-text">
-                        <!-- PLACEHOLDER: 替换为你的个人简介 -->
-                        I am a passionate researcher and a prospective PhD candidate in <strong class="accent-text">[Your Field]</strong> at <strong>[Your Current University]</strong>. My research focuses on <strong class="accent-text">[Research Area 1]</strong>, <strong class="accent-text">[Research Area 2]</strong>, and <strong class="accent-text">[Research Area 3]</strong>.
+                    <p class="about-text" data-zh="我是<strong class='accent-text'>王厚霖</strong>，浙江大学<strong>生物医学工程（仪器方向）</strong>本科生，辅修<strong>计算机科学与技术</strong>。GPA 4.58/5.0，对脑机接口、医学图像智能分析和多模态 AI 充满热情。" data-en="I'm <strong class='accent-text'>Houlin Wang</strong>, an undergraduate at <strong>Zhejiang University</strong> majoring in <strong>Biomedical Engineering (Instrumentation)</strong> with a minor in <strong>Computer Science</strong>. GPA 4.58/5.0, passionate about Brain-Computer Interfaces, medical image analysis, and multimodal AI.">
+                        I'm <strong class="accent-text">Houlin Wang</strong>, an undergraduate at <strong>Zhejiang University</strong> majoring in <strong>Biomedical Engineering (Instrumentation)</strong> with a minor in <strong>Computer Science</strong>. GPA 4.58/5.0, passionate about Brain-Computer Interfaces, medical image analysis, and multimodal AI.
                     </p>
-                    <p class="about-text">
-                        I am currently seeking PhD positions for <strong>Fall 2027</strong>. I aim to advance the understanding of [specific topic] and develop innovative solutions for [specific problem].
+                    <p class="about-text" data-zh="我曾参与 ZJU TruSense 生物传感器国际竞赛团队，负责电路设计与 PCB 绘制；参与了基于深度学习的角膜共聚焦显微镜智能诊断系统研究，专注于多模态模型训练与数据处理；目前正在参与浙江大学求实高等研究院的海马–杏仁核神经信号分析研究，探索非情绪性记忆编码机制。" data-en="I previously participated in the ZJU TruSense biosensor international competition team, responsible for circuit design and PCB layout. I also contributed to a deep learning-based corneal confocal microscopy diagnosis project, focusing on multimodal model training and data processing. I am currently involved in neural signal analysis research at Qiushi Academy for Advanced Studies, ZJU, exploring non-emotional memory encoding mechanisms between the hippocampus and amygdala.">
+                        I previously participated in the ZJU TruSense biosensor international competition team, responsible for circuit design and PCB layout. I also contributed to a deep learning-based corneal confocal microscopy diagnosis project, focusing on multimodal model training and data processing. I am currently involved in neural signal analysis research at Qiushi Academy for Advanced Studies, ZJU, exploring non-emotional memory encoding mechanisms between the hippocampus and amygdala.
                     </p>
-                    <p class="about-text">
-                        Beyond research, I enjoy [Hobby 1], [Hobby 2], and [Hobby 3].
+                    <p class="about-text" data-zh="研究之外，我热爱语言学习（中文、英语、法语、西班牙语）、游泳、足球，以及开源知识分享。" data-en="Beyond research, I enjoy language learning (Chinese, English, French, Spanish), swimming, football, and open-source knowledge sharing.">
+                        Beyond research, I enjoy language learning (Chinese, English, French, Spanish), swimming, football, and open-source knowledge sharing.
                     </p>
                     <div class="about-stats">
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
-                            <span class="stat-number" data-count="X">0</span>
-                            <span class="stat-label">Publications</span>
+                            <span class="stat-number" data-count="1">0</span>
+                            <span class="stat-label" data-zh="论文" data-en="Publications">Publications</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="700">
-                            <span class="stat-number" data-count="X">0</span>
-                            <span class="stat-label">Projects</span>
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label" data-zh="项目" data-en="Projects">Projects</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
-                            <span class="stat-number" data-count="X">0</span>
-                            <span class="stat-label">Awards</span>
+                            <span class="stat-number" data-count="3">0</span>
+                            <span class="stat-label" data-zh="奖项" data-en="Awards">Awards</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="900">
-                            <span class="stat-number" data-count="X">0</span>
-                            <span class="stat-label">Citations</span>
+                            <span class="stat-number" data-count="4">0</span>
+                            <span class="stat-label" data-zh="语言" data-en="Languages">Languages</span>
                         </div>
                     </div>
-                    <a href="#" class="btn btn-primary btn-cv">
-                        <span>Download CV</span>
-                        <i class="fas fa-download"></i>
+                    <a href="https://3samuelw.github.io/note/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-cv">
+                        <span data-zh="访问笔记站" data-en="Visit Notes Site">Visit Notes Site</span>
+                        <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             </div>
@@ -157,59 +155,62 @@
     <section class="section research" id="research">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">02.</span> Research Interests
+                <span class="title-number">02.</span>
+                <span data-zh="研究方向" data-en="Research Interests">Research Interests</span>
             </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                My research lies at the intersection of multiple cutting-edge fields.
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100"
+               data-zh="我的研究横跨神经工程、医学图像与人工智能的交叉前沿。"
+               data-en="My research spans the intersection of neural engineering, medical imaging, and artificial intelligence.">
+                My research spans the intersection of neural engineering, medical imaging, and artificial intelligence.
             </p>
             <div class="research-grid">
-                <!-- PLACEHOLDER: 替换为你的研究方向 -->
                 <div class="research-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
                     <div class="research-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3>[Research Area 1]</h3>
-                    <p>Brief description of your first research area and what specific problems you're working on.</p>
+                    <h3 data-zh="脑机接口与神经信号分析" data-en="BCI & Neural Signal Analysis">BCI &amp; Neural Signal Analysis</h3>
+                    <p data-zh="研究海马与杏仁核间非情绪性记忆编码的神经信号机制，探索神经元放电模式与跨脑区协同活动，并关注 BCI 在神经科学基础研究与医疗康复中的应用。" data-en="Researching non-emotional memory encoding mechanisms between the hippocampus and amygdala, exploring neuronal firing patterns and cross-region coordination, with a focus on BCI applications in fundamental neuroscience and medical rehabilitation.">Researching non-emotional memory encoding mechanisms between the hippocampus and amygdala, exploring neuronal firing patterns and cross-region coordination, with a focus on BCI applications in fundamental neuroscience and medical rehabilitation.</p>
                     <div class="card-tags">
-                        <span class="tag">Keyword 1</span>
-                        <span class="tag">Keyword 2</span>
-                        <span class="tag">Keyword 3</span>
+                        <span class="tag">EEG/ECoG</span>
+                        <span class="tag">Hippocampus</span>
+                        <span class="tag">Memory Encoding</span>
+                        <span class="tag">Neural Decoding</span>
                     </div>
                 </div>
                 <div class="research-card" data-aos="fade-up" data-aos-delay="300" data-tilt>
                     <div class="research-icon">
-                        <i class="fas fa-microchip"></i>
+                        <i class="fas fa-microscope"></i>
                     </div>
-                    <h3>[Research Area 2]</h3>
-                    <p>Brief description of your second research area and its significance in the broader context.</p>
+                    <h3 data-zh="医学图像智能分析" data-en="Medical Image Analysis">Medical Image Analysis</h3>
+                    <p data-zh="基于深度学习构建眼科图像的分类与分割模型，实现角膜病变的高通量实时精准诊断。" data-en="Building deep learning models for ophthalmic image classification and segmentation, enabling high-throughput real-time diagnosis of corneal lesions.">Building deep learning models for ophthalmic image classification and segmentation, enabling high-throughput real-time diagnosis of corneal lesions.</p>
                     <div class="card-tags">
-                        <span class="tag">Keyword 1</span>
-                        <span class="tag">Keyword 2</span>
-                        <span class="tag">Keyword 3</span>
+                        <span class="tag">Segmentation</span>
+                        <span class="tag">CLIP</span>
+                        <span class="tag">Confocal Microscopy</span>
                     </div>
                 </div>
                 <div class="research-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
                     <div class="research-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3>[Research Area 3]</h3>
-                    <p>Brief description of your third research area and potential real-world applications.</p>
+                    <h3 data-zh="多模态 AI" data-en="Multimodal AI">Multimodal AI</h3>
+                    <p data-zh="融合图像与文本表示，构建跨场景的一体化智能交互平台，探索视觉-语言模型在医疗场景的落地。" data-en="Fusing image and text representations to build cross-scenario intelligent interaction platforms, exploring vision-language models in medical applications.">Fusing image and text representations to build cross-scenario intelligent interaction platforms, exploring vision-language models in medical applications.</p>
                     <div class="card-tags">
-                        <span class="tag">Keyword 1</span>
-                        <span class="tag">Keyword 2</span>
-                        <span class="tag">Keyword 3</span>
+                        <span class="tag">Vision-Language</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Multimodal Fusion</span>
                     </div>
                 </div>
                 <div class="research-card" data-aos="fade-up" data-aos-delay="500" data-tilt>
                     <div class="research-icon">
-                        <i class="fas fa-robot"></i>
+                        <i class="fas fa-microchip"></i>
                     </div>
-                    <h3>[Research Area 4]</h3>
-                    <p>Brief description of your fourth research area and how it connects to your other work.</p>
+                    <h3 data-zh="生物传感器与仪器" data-en="Biosensors & Instrumentation">Biosensors &amp; Instrumentation</h3>
+                    <p data-zh="设计用于生理参数检测的便携式传感器系统，结合电路设计与信号处理解决医疗健康领域的实际问题。" data-en="Designing portable sensor systems for physiological parameter detection, combining circuit design and signal processing to address real-world healthcare challenges.">Designing portable sensor systems for physiological parameter detection, combining circuit design and signal processing to address real-world healthcare challenges.</p>
                     <div class="card-tags">
-                        <span class="tag">Keyword 1</span>
-                        <span class="tag">Keyword 2</span>
-                        <span class="tag">Keyword 3</span>
+                        <span class="tag">PCB Design</span>
+                        <span class="tag">Signal Processing</span>
+                        <span class="tag">Verilog/FPGA</span>
                     </div>
                 </div>
             </div>
@@ -220,76 +221,38 @@
     <section class="section publications" id="publications">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">03.</span> Publications
+                <span class="title-number">03.</span>
+                <span data-zh="论文发表" data-en="Publications">Publications</span>
             </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                Selected works from my research journey.
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100"
+               data-zh="我的研究成果与在投工作。"
+               data-en="Selected works and ongoing research.">
+                Selected works and ongoing research.
             </p>
 
             <!-- Publication Filter -->
             <div class="pub-filters" data-aos="fade-up" data-aos-delay="150">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="conference">Conference</button>
-                <button class="filter-btn" data-filter="journal">Journal</button>
-                <button class="filter-btn" data-filter="preprint">Preprint</button>
+                <button class="filter-btn active" data-filter="all" data-zh="全部" data-en="All">All</button>
+                <button class="filter-btn" data-filter="conference" data-zh="会议" data-en="Conference">Conference</button>
+                <button class="filter-btn" data-filter="journal" data-zh="期刊" data-en="Journal">Journal</button>
+                <button class="filter-btn" data-filter="preprint" data-zh="预印本" data-en="Preprint">Preprint</button>
             </div>
 
             <div class="pub-list">
-                <!-- PLACEHOLDER: 替换为你的论文信息 -->
-                <div class="pub-item" data-aos="fade-up" data-aos-delay="200" data-category="conference">
-                    <div class="pub-year">2026</div>
-                    <div class="pub-content">
-                        <div class="pub-venue"><span class="venue-badge conference">Conference Name 2026</span></div>
-                        <h3 class="pub-title">[Paper Title 1: A Comprehensive Study on Something Important]</h3>
-                        <p class="pub-authors">
-                            <strong class="accent-text">Your Name</strong>, Co-author 1, Co-author 2, Advisor Name
-                        </p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="pub-link"><i class="fas fa-globe"></i> Project</a>
-                            <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
-                        </div>
-                    </div>
-                    <div class="pub-thumbnail">
-                        <div class="thumbnail-placeholder"><i class="fas fa-image"></i></div>
-                    </div>
-                </div>
-
-                <div class="pub-item" data-aos="fade-up" data-aos-delay="300" data-category="journal">
+                <div class="pub-item" data-aos="fade-up" data-aos-delay="200" data-category="preprint">
                     <div class="pub-year">2025</div>
                     <div class="pub-content">
-                        <div class="pub-venue"><span class="venue-badge journal">Journal Name</span></div>
-                        <h3 class="pub-title">[Paper Title 2: Another Fascinating Research Contribution]</h3>
+                        <div class="pub-venue"><span class="venue-badge preprint" data-zh="在投" data-en="Under Review">Under Review</span></div>
+                        <h3 class="pub-title" data-zh="基于 AI 的角膜病变诊断多病种活体共聚焦显微镜数据集" data-en="A multi-disease in vivo confocal microscopy dataset for AI-based corneal disease diagnosis and research">A multi-disease in vivo confocal microscopy dataset for AI-based corneal disease diagnosis and research</h3>
                         <p class="pub-authors">
-                            Co-author 1, <strong class="accent-text">Your Name</strong>, Co-author 2
+                            Chentao Jiang, Ruiqi Yang, <strong class="accent-text">Houlin Wang</strong> et al.
                         </p>
                         <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-code"></i> Code</a>
-                            <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
+                            <span class="pub-link pub-link-disabled"><i class="fas fa-file-pdf"></i> <span data-zh="审稿中" data-en="Under Review">Under Review</span></span>
                         </div>
                     </div>
                     <div class="pub-thumbnail">
-                        <div class="thumbnail-placeholder"><i class="fas fa-image"></i></div>
-                    </div>
-                </div>
-
-                <div class="pub-item" data-aos="fade-up" data-aos-delay="400" data-category="preprint">
-                    <div class="pub-year">2025</div>
-                    <div class="pub-content">
-                        <div class="pub-venue"><span class="venue-badge preprint">arXiv Preprint</span></div>
-                        <h3 class="pub-title">[Paper Title 3: Ongoing Work with Promising Results]</h3>
-                        <p class="pub-authors">
-                            <strong class="accent-text">Your Name</strong>, Co-author 1
-                        </p>
-                        <div class="pub-links">
-                            <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
-                            <a href="#" class="pub-link"><i class="fas fa-quote-right"></i> BibTeX</a>
-                        </div>
-                    </div>
-                    <div class="pub-thumbnail">
-                        <div class="thumbnail-placeholder"><i class="fas fa-image"></i></div>
+                        <div class="thumbnail-placeholder"><i class="fas fa-eye"></i></div>
                     </div>
                 </div>
             </div>
@@ -300,30 +263,18 @@
     <section class="section education" id="education">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">04.</span> Education
+                <span class="title-number">04.</span>
+                <span data-zh="教育经历" data-en="Education">Education</span>
             </h2>
             <div class="timeline">
-                <!-- PLACEHOLDER: 替换为你的教育经历 -->
                 <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">20XX — 20XX</div>
-                        <h3>[University Name]</h3>
-                        <h4>M.S. in [Your Major]</h4>
-                        <p>GPA: X.XX/4.0</p>
-                        <p>Thesis: [Thesis Title]</p>
-                        <p>Advisor: Prof. [Advisor Name]</p>
-                    </div>
-                </div>
-                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">20XX — 20XX</div>
-                        <h3>[University Name]</h3>
-                        <h4>B.S. in [Your Major]</h4>
-                        <p>GPA: X.XX/4.0 | Rank: Top X%</p>
-                        <p>Thesis: [Thesis Title]</p>
-                        <p>Honors: [Honors Program / Relevant Details]</p>
+                        <div class="timeline-date">2023.09 — <span data-zh="至今" data-en="Present">Present</span></div>
+                        <h3 data-zh="浙江大学" data-en="Zhejiang University">Zhejiang University</h3>
+                        <h4 data-zh="生物医学工程（仪器方向）本科 · 辅修计算机科学与技术" data-en="B.Eng. in Biomedical Engineering (Instrumentation) · Minor in Computer Science">B.Eng. in Biomedical Engineering (Instrumentation) · Minor in Computer Science</h4>
+                        <p>GPA: 4.58 / 5.0 &nbsp;|&nbsp; <span data-zh="百分制：91.23" data-en="Percentage: 91.23">Percentage: 91.23</span></p>
+                        <p data-zh="主修课程：微机原理及应用、工程生理学、数据结构基础、计算机组成、离散数学及其应用、面向对象程序设计、数字逻辑设计..." data-en="Key Courses: Microcomputer Principles, Engineering Physiology, Data Structures, Computer Organization, Discrete Mathematics, OOP, Digital Logic Design...">Key Courses: Microcomputer Principles, Engineering Physiology, Data Structures, Computer Organization, Discrete Mathematics, OOP, Digital Logic Design</p>
                     </div>
                 </div>
             </div>
@@ -334,57 +285,81 @@
     <section class="section experience" id="experience">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">05.</span> Experience
+                <span class="title-number">05.</span>
+                <span data-zh="项目经历" data-en="Experience">Experience</span>
             </h2>
             <div class="experience-grid">
-                <!-- PLACEHOLDER: 替换为你的经历 -->
                 <div class="exp-card" data-aos="fade-up" data-aos-delay="200" data-tilt>
                     <div class="exp-header">
-                        <div class="exp-icon"><i class="fas fa-flask"></i></div>
-                        <div class="exp-date">20XX.XX — Present</div>
+                        <div class="exp-icon"><i class="fas fa-brain"></i></div>
+                        <div class="exp-date">2025.08 — <span data-zh=" " data-en="Present">Present</span></div>
                     </div>
-                    <h3 class="exp-role">Research Assistant</h3>
-                    <h4 class="exp-org">[Lab Name], [University]</h4>
-                    <p class="exp-desc">
-                        Working on [specific research topic] under the supervision of Prof. [Name]. Key contributions include [brief description].
+                    <h3 class="exp-role" data-zh="研究参与者" data-en="Research Participant">Research Participant</h3>
+                    <h4 class="exp-org" data-zh="海马–杏仁核神经信号分析" data-en="Hippocampus–Amygdala Neural Signal Analysis">Hippocampus–Amygdala Neural Signal Analysis</h4>
+                    <p class="exp-inst" data-zh="浙江大学求实高等研究院" data-en="Qiushi Academy for Advanced Studies, Zhejiang University">Qiushi Academy for Advanced Studies, Zhejiang University</p>
+                    <p class="exp-desc" data-zh="参与海马与杏仁核之间非情绪性记忆编码机制的神经信号分析研究，聚焦于神经元放电模式与记忆巩固过程中的跨脑区协同活动，探索脑机接口在神经科学基础研究中的应用。" data-en="Participating in research on non-emotional memory encoding mechanisms between the hippocampus and amygdala, focusing on neuronal firing patterns and cross-region coordination during memory consolidation, exploring BCI applications in fundamental neuroscience research.">
+                        Participating in research on non-emotional memory encoding mechanisms between the hippocampus and amygdala, focusing on neuronal firing patterns and cross-region coordination during memory consolidation, exploring BCI applications in fundamental neuroscience research.
                     </p>
                     <div class="card-tags">
-                        <span class="tag">Skill 1</span>
-                        <span class="tag">Skill 2</span>
-                        <span class="tag">Skill 3</span>
+                        <span class="tag">Neural Signal Analysis</span>
+                        <span class="tag">Hippocampus</span>
+                        <span class="tag">Memory Encoding</span>
+                        <span class="tag">BCI</span>
                     </div>
                 </div>
 
                 <div class="exp-card" data-aos="fade-up" data-aos-delay="300" data-tilt>
                     <div class="exp-header">
-                        <div class="exp-icon"><i class="fas fa-building"></i></div>
-                        <div class="exp-date">20XX.XX — 20XX.XX</div>
+                        <div class="exp-icon"><i class="fas fa-microscope"></i></div>
+                        <div class="exp-date">2025.04 — 2026.05</div>
                     </div>
-                    <h3 class="exp-role">Research Intern</h3>
-                    <h4 class="exp-org">[Company/Institute Name]</h4>
-                    <p class="exp-desc">
-                        Focused on [project description]. Developed [specific contribution] that resulted in [outcome/impact].
+                    <h3 class="exp-role" data-zh="研究参与者" data-en="Student Researcher">Student Researcher</h3>
+                    <h4 class="exp-org" data-zh="角膜共聚焦显微镜 AI 诊断项目" data-en="Corneal Confocal Microscopy AI Diagnosis">Corneal Confocal Microscopy AI Diagnosis</h4>
+                    <p class="exp-inst" data-zh="浙江大学" data-en="Zhejiang University">Zhejiang University</p>
+                    <p class="exp-desc" data-zh="参与基于深度学习的角膜共聚焦显微镜智能诊断系统开发，负责数据集处理与 CLIP 模型训练调试，构建融合图像与文本表示的多模态模型，支持角膜病变的高通量实时精准诊断。" data-en="Participated in developing a deep learning-based intelligent diagnosis system for corneal confocal microscopy. Responsible for dataset processing and CLIP model training, building multimodal models fusing image and text representations for high-throughput corneal lesion diagnosis.">
+                        Participated in developing a deep learning-based intelligent diagnosis system for corneal confocal microscopy. Responsible for dataset processing and CLIP model training, building multimodal models fusing image and text representations for high-throughput corneal lesion diagnosis.
                     </p>
                     <div class="card-tags">
-                        <span class="tag">Skill 1</span>
-                        <span class="tag">Skill 2</span>
-                        <span class="tag">Skill 3</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">CLIP</span>
+                        <span class="tag">Medical Imaging</span>
+                        <span class="tag">Python</span>
                     </div>
                 </div>
 
                 <div class="exp-card" data-aos="fade-up" data-aos-delay="400" data-tilt>
                     <div class="exp-header">
-                        <div class="exp-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                        <div class="exp-date">20XX.XX — 20XX.XX</div>
+                        <div class="exp-icon"><i class="fas fa-flask"></i></div>
+                        <div class="exp-date">2024.10 — 2025.09</div>
                     </div>
-                    <h3 class="exp-role">Teaching Assistant</h3>
-                    <h4 class="exp-org">[Course Name], [University]</h4>
-                    <p class="exp-desc">
-                        Assisted with [course topic]. Responsibilities included [brief description of duties].
+                    <h3 class="exp-role" data-zh="竞赛团队成员" data-en="Competition Team Member">Competition Team Member</h3>
+                    <h4 class="exp-org" data-zh="ZJU TruSense 生物传感器设计竞赛团队" data-en="ZJU TruSense Biosensor Design Competition Team">ZJU TruSense Biosensor Design Competition Team</h4>
+                    <p class="exp-inst" data-zh="浙江大学 · SenseUs @ TU Eindhoven" data-en="Zhejiang University · SenseUs @ TU Eindhoven">Zhejiang University · SenseUs @ TU Eindhoven</p>
+                    <p class="exp-desc" data-zh="参与荷兰埃因霍温理工大学 SenseUs 国际竞赛，设计以肌酐检测为核心的便携式急性肾衰竭监测装置。负责电路设计、PCB 绘制及仪器焊接调试，采用多学科交叉手段解决医疗健康领域实际问题。" data-en="Participated in the SenseUs international competition at TU Eindhoven, designing a portable acute kidney failure monitoring device centered on creatinine detection. Responsible for circuit design, PCB layout, and instrument assembly and debugging.">
+                        Participated in the SenseUs international competition at TU Eindhoven, designing a portable acute kidney failure monitoring device centered on creatinine detection. Responsible for circuit design, PCB layout, and instrument assembly and debugging.
                     </p>
                     <div class="card-tags">
-                        <span class="tag">Teaching</span>
-                        <span class="tag">Mentoring</span>
+                        <span class="tag">PCB Design</span>
+                        <span class="tag">Circuit Design</span>
+                        <span class="tag">Biosensor</span>
+                        <span class="tag">Vivado</span>
+                    </div>
+                </div>
+
+                <div class="exp-card" data-aos="fade-up" data-aos-delay="500" data-tilt>
+                    <div class="exp-header">
+                        <div class="exp-icon"><i class="fas fa-globe"></i></div>
+                        <div class="exp-date">2024.07 — 2024.08</div>
+                    </div>
+                    <h3 class="exp-role" data-zh="支教志愿者" data-en="Volunteer Teacher">Volunteer Teacher</h3>
+                    <h4 class="exp-org" data-zh="心系西部支教活动" data-en="Western China Education Volunteer Program">Western China Education Volunteer Program</h4>
+                    <p class="exp-inst" data-zh="四川洪雅" data-en="Hongya, Sichuan">Hongya, Sichuan</p>
+                    <p class="exp-desc" data-zh="参与心系西部协会组织的暑期支教活动，前往四川洪雅担任班主任并授课，致力于教育资源均衡化。" data-en="Participated in a summer volunteer teaching program organized by the Western China Care Association, serving as a homeroom teacher and instructor in Hongya, Sichuan.">
+                        Participated in a summer volunteer teaching program organized by the Western China Care Association, serving as a homeroom teacher and instructor in Hongya, Sichuan.
+                    </p>
+                    <div class="card-tags">
+                        <span class="tag" data-zh="志愿服务" data-en="Volunteering">Volunteering</span>
+                        <span class="tag" data-zh="教育" data-en="Education">Education</span>
                     </div>
                 </div>
             </div>
@@ -395,38 +370,39 @@
     <section class="section skills" id="skills">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">06.</span> Skills & Tools
+                <span class="title-number">06.</span>
+                <span data-zh="技能与工具" data-en="Skills &amp; Tools">Skills &amp; Tools</span>
             </h2>
             <div class="skills-grid">
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
-                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <h3><i class="fas fa-code"></i> <span data-zh="编程语言" data-en="Programming">Programming</span></h3>
                     <div class="skill-tags">
-                        <!-- PLACEHOLDER: 替换为你的技能 -->
-                        <span class="skill-tag" data-level="expert">Python</span>
-                        <span class="skill-tag" data-level="expert">PyTorch</span>
-                        <span class="skill-tag" data-level="advanced">TensorFlow</span>
+                        <span class="skill-tag" data-level="advanced">Python</span>
                         <span class="skill-tag" data-level="advanced">C++</span>
-                        <span class="skill-tag" data-level="intermediate">Java</span>
+                        <span class="skill-tag" data-level="advanced">C</span>
+                        <span class="skill-tag" data-level="intermediate">Verilog</span>
                         <span class="skill-tag" data-level="intermediate">JavaScript</span>
                     </div>
                 </div>
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
+                    <h3><i class="fas fa-tools"></i> <span data-zh="工具与平台" data-en="Tools &amp; Platforms">Tools &amp; Platforms</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-level="expert">Linux</span>
                         <span class="skill-tag" data-level="expert">Git</span>
-                        <span class="skill-tag" data-level="advanced">Docker</span>
+                        <span class="skill-tag" data-level="advanced">PyTorch</span>
                         <span class="skill-tag" data-level="advanced">LaTeX</span>
-                        <span class="skill-tag" data-level="intermediate">AWS</span>
-                        <span class="skill-tag" data-level="intermediate">Slurm</span>
+                        <span class="skill-tag" data-level="advanced">Typst</span>
+                        <span class="skill-tag" data-level="advanced">Vivado</span>
+                        <span class="skill-tag" data-level="intermediate">MakeMake</span>
+                        <span class="skill-tag" data-level="intermediate">嘉立创EDA</span>
                     </div>
                 </div>
                 <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
+                    <h3><i class="fas fa-language"></i> <span data-zh="语言能力" data-en="Languages">Languages</span></h3>
                     <div class="skill-tags">
-                        <span class="skill-tag" data-level="expert">Chinese (Native)</span>
-                        <span class="skill-tag" data-level="advanced">English (Fluent)</span>
-                        <span class="skill-tag" data-level="intermediate">[Other Language]</span>
+                        <span class="skill-tag" data-level="expert" data-zh="中文（母语）" data-en="Chinese (Native)">Chinese (Native)</span>
+                        <span class="skill-tag" data-level="expert" data-zh="英语（CET-6 603 / TOEFL 101）" data-en="English (CET-6 603 / TOEFL 101)">English (CET-6 603 / TOEFL 101)</span>
+                        <span class="skill-tag" data-level="advanced" data-zh="法语（TFU4 96/100）" data-en="French (TFU4 96/100)">French (TFU4 96/100)</span>
+                        <span class="skill-tag" data-level="intermediate" data-zh="西班牙语（学习中）" data-en="Spanish (Learning)">Spanish (Learning)</span>
                     </div>
                 </div>
             </div>
@@ -437,40 +413,32 @@
     <section class="section awards" id="awards">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">07.</span> Awards & Honors
+                <span class="title-number">07.</span>
+                <span data-zh="荣誉奖项" data-en="Awards &amp; Honors">Awards &amp; Honors</span>
             </h2>
             <div class="awards-grid">
-                <!-- PLACEHOLDER: 替换为你的奖项 -->
                 <div class="award-item" data-aos="fade-up" data-aos-delay="200">
                     <div class="award-icon"><i class="fas fa-trophy"></i></div>
                     <div class="award-content">
-                        <h3>[Award Name 1]</h3>
-                        <p>[Awarding Organization]</p>
-                        <span class="award-year">20XX</span>
+                        <h3 data-zh="浙江省政府奖学金" data-en="Zhejiang Provincial Government Scholarship">Zhejiang Provincial Government Scholarship</h3>
+                        <p data-zh="浙江省人民政府" data-en="Zhejiang Provincial Government">Zhejiang Provincial Government</p>
+                        <span class="award-year">2024–2025</span>
                     </div>
                 </div>
                 <div class="award-item" data-aos="fade-up" data-aos-delay="300">
                     <div class="award-icon"><i class="fas fa-medal"></i></div>
                     <div class="award-content">
-                        <h3>[Award Name 2]</h3>
-                        <p>[Awarding Organization]</p>
-                        <span class="award-year">20XX</span>
+                        <h3 data-zh="浙江大学二等奖学金" data-en="ZJU Second-Class Scholarship">ZJU Second-Class Scholarship</h3>
+                        <p data-zh="浙江大学" data-en="Zhejiang University">Zhejiang University</p>
+                        <span class="award-year">2024–2025</span>
                     </div>
                 </div>
                 <div class="award-item" data-aos="fade-up" data-aos-delay="400">
-                    <div class="award-icon"><i class="fas fa-award"></i></div>
+                    <div class="award-icon"><i class="fas fa-medal"></i></div>
                     <div class="award-content">
-                        <h3>[Scholarship Name]</h3>
-                        <p>[Awarding Organization]</p>
-                        <span class="award-year">20XX</span>
-                    </div>
-                </div>
-                <div class="award-item" data-aos="fade-up" data-aos-delay="500">
-                    <div class="award-icon"><i class="fas fa-star"></i></div>
-                    <div class="award-content">
-                        <h3>[Honor/Distinction]</h3>
-                        <p>[Organization]</p>
-                        <span class="award-year">20XX</span>
+                        <h3 data-zh="浙江大学三等奖学金" data-en="ZJU Third-Class Scholarship">ZJU Third-Class Scholarship</h3>
+                        <p data-zh="浙江大学" data-en="Zhejiang University">Zhejiang University</p>
+                        <span class="award-year">2023–2024</span>
                     </div>
                 </div>
             </div>
@@ -481,61 +449,66 @@
     <section class="section contact" id="contact">
         <div class="container">
             <h2 class="section-title" data-aos="fade-up">
-                <span class="title-number">08.</span> Get in Touch
+                <span class="title-number">08.</span>
+                <span data-zh="联系我" data-en="Get in Touch">Get in Touch</span>
             </h2>
-            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
-                I'm actively seeking PhD positions and always open to research collaborations.
-                Feel free to reach out!
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100"
+               data-zh="欢迎科研合作、学术交流，或只是打个招呼！"
+               data-en="Open to research collaborations, academic exchanges, or just a friendly hello!">
+                Open to research collaborations, academic exchanges, or just a friendly hello!
             </p>
             <div class="contact-grid">
                 <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
-                    <!-- PLACEHOLDER: 替换为你的联系方式 -->
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+                            <a href="mailto:3samuelw@gmail.com">3samuelw@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4><span data-zh="校园邮箱" data-en="University Email">University Email</span></h4>
+                            <a href="mailto:3230100885@zju.edu.cn">3230100885@zju.edu.cn</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Location</h4>
-                            <p>[City, Country]</p>
+                            <h4><span data-zh="所在地" data-en="Location">Location</span></h4>
+                            <p data-zh="杭州，中国" data-en="Hangzhou, China">Hangzhou, China</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-university"></i>
                         <div>
-                            <h4>Affiliation</h4>
-                            <p>[Department], [University]</p>
+                            <h4><span data-zh="所属机构" data-en="Affiliation">Affiliation</span></h4>
+                            <p data-zh="生物医学工程与仪器科学学院，浙江大学" data-en="College of Biomedical Engineering &amp; Instrument Science, Zhejiang University">College of Biomedical Engineering &amp; Instrument Science, Zhejiang University</p>
                         </div>
                     </div>
                     <div class="contact-social">
-                        <a href="#" class="social-link" aria-label="Google Scholar">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="#" class="social-link" aria-label="GitHub">
+                        <a href="https://github.com/3SamuelW" class="social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/houlin-wang-b43b87341/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-x-twitter"></i>
+                        <a href="https://3samuelw.github.io/note/" class="social-link" aria-label="Notes Site" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-book-open"></i>
                         </a>
-                        <a href="#" class="social-link" aria-label="ORCID">
-                            <i class="fab fa-orcid"></i>
+                        <a href="mailto:3samuelw@gmail.com" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
                         </a>
                     </div>
                 </div>
                 <div class="contact-card" data-aos="fade-left" data-aos-delay="400">
                     <div class="card-inner">
                         <div class="card-front">
-                            <div class="card-logo">YN</div>
-                            <h3>Your Name</h3>
-                            <p>PhD Applicant · [Field]</p>
-                            <p class="card-email">your.email@university.edu</p>
+                            <div class="card-logo">HL</div>
+                            <h3>Houlin Wang <span style="font-size:0.7em;opacity:0.7;">王厚霖</span></h3>
+                            <p data-zh="本科生 · 浙江大学" data-en="Undergraduate · ZJU">Undergraduate · ZJU</p>
+                            <p class="card-email">3samuelw@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -547,7 +520,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>Designed & Built by <span class="accent-text">Your Name</span></p>
+                <p>Designed &amp; Built by <span class="accent-text">Houlin Wang</span></p>
                 <p class="footer-note">&copy; 2026. All rights reserved.</p>
             </div>
         </div>

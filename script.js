@@ -2,6 +2,7 @@
    INITIALIZATION
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
+    initLang();
     initAOS();
     initTyped();
     initParticles();
@@ -31,23 +32,23 @@ function initAOS() {
    TYPED.JS - Hero Typing Effect
    ============================================================ */
 function initTyped() {
-    if (document.getElementById('typedText')) {
-        new Typed('#typedText', {
-            strings: [
-                // PLACEHOLDER: 替换为你的身份/标签
-                'PhD Applicant',
-                'Machine Learning Researcher',
-                '[Your Research Area] Enthusiast',
-                'Problem Solver',
-                'Open Source Contributor'
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            smartBackspace: true
-        });
+    if (!document.getElementById('typedText')) return;
+    const lang = localStorage.getItem('lang') || 'en';
+    const strings = lang === 'zh'
+        ? ['浙大本科生', '脑机接口研究者', '医学图像 AI 探索者', '多语言爱好者', '开源贡献者']
+        : ['ZJU Undergraduate', 'BCI Enthusiast', 'Medical AI Explorer', 'Multilingual Learner', 'Open Source Contributor'];
+
+    if (window._typedInstance) {
+        window._typedInstance.destroy();
     }
+    window._typedInstance = new Typed('#typedText', {
+        strings,
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 2000,
+        loop: true,
+        smartBackspace: true
+    });
 }
 
 /* ============================================================
@@ -385,3 +386,55 @@ styleSheet.textContent = `
     }
 `;
 document.head.appendChild(styleSheet);
+
+/* ============================================================
+   LANGUAGE TOGGLE (中文 / English)
+   ============================================================ */
+function detectDefaultLang() {
+    // Check saved preference first
+    const saved = localStorage.getItem('lang');
+    if (saved) return saved;
+    // Try to detect via timezone (China Standard Time = UTC+8)
+    try {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (tz === 'Asia/Shanghai' || tz === 'Asia/Chongqing' ||
+            tz === 'Asia/Harbin' || tz === 'Asia/Urumqi') {
+            return 'zh';
+        }
+    } catch (e) {}
+    return 'en';
+}
+
+function applyLang(lang) {
+    document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    // Update all elements with data-zh / data-en
+    document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+        const text = lang === 'zh' ? el.getAttribute('data-zh') : el.getAttribute('data-en');
+        if (text !== null) {
+            // Use innerHTML to support nested tags in translations
+            el.innerHTML = text;
+        }
+    });
+    // Update lang toggle button label
+    const btn = document.getElementById('langToggle');
+    if (btn) {
+        btn.querySelector('.lang-label').textContent = lang === 'zh' ? 'EN' : '中';
+        btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换为中文');
+    }
+    // Re-init Typed with correct language strings
+    initTyped();
+}
+
+function initLang() {
+    const lang = detectDefaultLang();
+    localStorage.setItem('lang', lang);
+    applyLang(lang);
+
+    const btn = document.getElementById('langToggle');
+    btn?.addEventListener('click', () => {
+        const current = localStorage.getItem('lang') || 'en';
+        const next = current === 'zh' ? 'en' : 'zh';
+        localStorage.setItem('lang', next);
+        applyLang(next);
+    });
+}
