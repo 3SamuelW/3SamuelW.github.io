@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initThemeToggle();
     initScrollEffects();
     initPubFilters();
-    initStatCounters();
     initTiltCards();
     initCursorGlow();
 });
@@ -35,8 +34,8 @@ function initTyped() {
     if (!document.getElementById('typedText')) return;
     const lang = localStorage.getItem('lang') || 'en';
     const strings = lang === 'zh'
-        ? ['浙大本科生', '脑机接口研究者', '医学图像 AI 探索者', '多语言爱好者', '开源贡献者']
-        : ['ZJU Undergraduate', 'BCI Enthusiast', 'Medical AI Explorer', 'Multilingual Learner', 'Open Source Contributor'];
+        ? ['浙大本科生', 'AI 赋能科学学习者', '神经数据研究者', '医学图像研究者', '嵌入式系统实践者', '多语言学习者']
+        : ['ZJU Undergraduate', 'AI for Science Learner', 'Neural Data Researcher', 'Medical Imaging Researcher', 'Embedded Systems Builder', 'Multilingual Learner'];
 
     if (window._typedInstance) {
         window._typedInstance.destroy();
@@ -278,55 +277,6 @@ function initPubFilters() {
 }
 
 /* ============================================================
-   STAT COUNTERS
-   ============================================================ */
-function initStatCounters() {
-    const statNumbers = document.querySelectorAll('.stat-number[data-count]');
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = el.getAttribute('data-count');
-
-                // If target is a number, animate; otherwise just set text
-                const num = parseInt(target);
-                if (!isNaN(num) && num > 0) {
-                    animateCounter(el, 0, num, 1500);
-                } else {
-                    el.textContent = target;
-                }
-                counterObserver.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    statNumbers.forEach(el => counterObserver.observe(el));
-}
-
-function animateCounter(el, start, end, duration) {
-    const startTime = performance.now();
-    const diff = end - start;
-
-    function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        // Ease out cubic
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.floor(start + diff * eased);
-        el.textContent = current;
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
-        } else {
-            el.textContent = end;
-        }
-    }
-
-    requestAnimationFrame(update);
-}
-
-/* ============================================================
    TILT EFFECT
    ============================================================ */
 function initTiltCards() {
@@ -394,11 +344,20 @@ function detectDefaultLang() {
     // Check saved preference first
     const saved = localStorage.getItem('lang');
     if (saved) return saved;
-    // Try to detect via timezone (China Standard Time = UTC+8)
+    // Try to detect via timezone. UTC+8 defaults to Chinese for Beijing-time users.
     try {
         const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-        if (tz === 'Asia/Shanghai' || tz === 'Asia/Chongqing' ||
-            tz === 'Asia/Harbin' || tz === 'Asia/Urumqi') {
+        const zhTimeZones = new Set([
+            'Asia/Shanghai',
+            'Asia/Harbin',
+            'Asia/Urumqi',
+            'Asia/Singapore',
+            'Asia/Hong_Kong',
+            'Asia/Macau',
+            'Asia/Taipei'
+        ]);
+        const offsetMinutes = new Date().getTimezoneOffset();
+        if (zhTimeZones.has(tz) || offsetMinutes === -480) {
             return 'zh';
         }
     } catch (e) {}
@@ -411,8 +370,12 @@ function applyLang(lang) {
     document.querySelectorAll('[data-zh][data-en]').forEach(el => {
         const text = lang === 'zh' ? el.getAttribute('data-zh') : el.getAttribute('data-en');
         if (text !== null) {
-            // Use innerHTML to support nested tags in translations
-            el.innerHTML = text;
+            // Only use HTML parsing for translations that intentionally contain markup.
+            if (/[<&]/.test(text)) {
+                el.innerHTML = text;
+            } else {
+                el.textContent = text;
+            }
         }
     });
     // Update lang toggle button label
