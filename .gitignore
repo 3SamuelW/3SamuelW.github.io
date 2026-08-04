@@ -30,3 +30,5 @@ package-lock.json
 
 # Resume local sources/assets not needed for GitHub Pages
 resume/*.tex
+resume/photo.jpg
+resume/Academic_CV_Template/
